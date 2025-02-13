@@ -1,0 +1,53 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/about-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <h1>About US</h1>
+          <span class="subheading">A short brief of our Journey.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <h1>What Is PRL?</h1>
+        <h2>A Hub of Research and Development Excellence</h2>
+        <p>
+          The Power Systems Research Lab (PRL) is a leading research center
+          dedicated to advancing technologies in electrical, mechanical, and
+          software engineering. By focusing on cutting-edge technologies and
+          multidisciplinary research, PRL develops innovative solutions for
+          industries such as robotics, automation, and energy systems.
+        </p>
+        <h1>The Life at PRL</h1>
+        <h2>Join a Community of Innovators and Problem-Solvers</h2>
+        <p>
+          The PRL (Power Systems Research Lab) stands out as the most
+          professional and dynamic entity on campus due to its commitment to
+          innovation, interdisciplinary collaboration, and cutting-edge
+          research.
+        </p>
+
+        {% if is_admin %}
+        <!-- Admin-Only Button -->
+        <a href="{{ url_for('add_new_post') }}" class="btn btn-primary">
+          Add New Post
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include "footer.html" %}
