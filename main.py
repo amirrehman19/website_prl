@@ -128,16 +128,19 @@ def submit_contact():
         f"<p>Phone: {phone}</p>"
         f"<p>Message: {message}</p>"
     )
+@app.route('/')
+def home():
+    return redirect(url_for('about'))
 
 @app.route("/about")
 def about():
     return render_template("about.html")
 
-@app.route('/')
+@app.route('/post')
 def get_all_posts():
     result = db.session.execute(db.select(BlogPost))
     posts = result.scalars().all()
-    return render_template("about.html", all_posts=posts,is_admin=session.get("admin"))
+    return render_template("index.html", all_posts=posts)
 
 
 @app.route("/post/<int:post_id>")
