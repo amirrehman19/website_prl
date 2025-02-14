@@ -137,7 +137,7 @@ def about():
 def get_all_posts():
     result = db.session.execute(db.select(BlogPost))
     posts = result.scalars().all()
-    return render_template("about.html", all_posts=posts,is_admin=session.get("admin"))
+    return render_template("index.html", all_posts=posts,is_admin=session.get("admin"))
 
 
 @app.route("/post/<int:post_id>")
