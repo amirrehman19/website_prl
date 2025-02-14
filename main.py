@@ -212,4 +212,4 @@ def contact():
 
 if __name__ == "__main__":
     from waitress import serve
-    serve(app,host="172.16.32.29", port=5002)
+    serve(app, port=5002)
