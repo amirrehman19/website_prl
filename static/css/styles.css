@@ -19,7 +19,7 @@
 
 @media (max-width: 768px) {
     .masthead {
-        height: 70vh; /* Increase from 50vh */
+        height: 30vh; /* Increase from 50vh */
         background-position: center top;
     }
 }
