@@ -9,7 +9,25 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+ */.
+.masthead {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust height based on design needs */
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        background-position: top center;
+        height: 50vh; /* Adjust this to ensure the image is visible */
+    }
+}
+
+
+
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -1940,6 +1958,7 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
