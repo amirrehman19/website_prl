@@ -56,10 +56,11 @@ class BlogPost(db.Model):
 with app.app_context():
     db.create_all()
 
-
-
-
-
+with app.app_context():
+    post = BlogPost.query.get(3)  # Fetch post with id=3
+    if post:
+        post.img_url = "img_5.png"  # Update img_url
+        db.session.commit()
 # WTForm
 class CreatePostForm(FlaskForm):
     title = StringField(" Title", validators=[DataRequired()])
