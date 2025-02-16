@@ -20,7 +20,7 @@
 @media (max-width: 768px) {
     .masthead {
         background-position: top center;
-        height: 50vh; /* Adjust this to ensure the image is visible */
+        height: 100vh; /* Adjust this to ensure the image is visible */
     }
 }
 
